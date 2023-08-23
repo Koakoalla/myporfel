@@ -1,29 +1,21 @@
-import { Parallax, ParallaxLayer } from '@react-spring/parallax';
+import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
-import CustomMouse from '@/modules/customMouse';
-import Header from '@/modules/header';
-import { ProjectList, ProjectsHeader } from '@/modules/projects';
-import Skills from '@/modules/skills';
+import About from "@/modules/about/components";
+import CustomMouse from "@/modules/customMouse";
+import Hero from "@/modules/hero";
 
 export default function HomePage() {
   return (
     <>
       <CustomMouse />
+
       <Parallax pages={10} id="__parallax">
         <ParallaxLayer>
-          <Header />
+          <Hero />
         </ParallaxLayer>
 
-        <ParallaxLayer offset={1}>
-          <ProjectsHeader />
-        </ParallaxLayer>
-
-        <ParallaxLayer sticky={{ start: 1.15, end: 3.78 }}>
-          <ProjectList />
-        </ParallaxLayer>
-
-        <ParallaxLayer offset={5}>
-          <Skills />
+        <ParallaxLayer offset={1} factor={2}>
+          <About />
         </ParallaxLayer>
       </Parallax>
     </>

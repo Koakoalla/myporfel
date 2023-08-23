@@ -14,6 +14,10 @@ body {
 html {
   height: -webkit-fill-available;
 }
+span {
+  display: inline-block;
+}
+
 
 #__next,
 #__font {
@@ -30,11 +34,29 @@ html {
   }
 
   .primary-gradient {
-    @apply bg-gradient-to-r from-[#ee0979] to-[#ff6a00];
-  }
+    background-image: linear-gradient(-45deg, #fe8c00, #f83600, #ee0979, #ff6a00);
+    background-size: 200% 200%;
+    animation: gradient 10s ease infinite;
+    
+      }
 
   .text-gradient {
     @apply primary-gradient bg-clip-text text-transparent;
+  }
+  .sans {
+    @apply font-sans;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 

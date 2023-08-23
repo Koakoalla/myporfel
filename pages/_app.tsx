@@ -7,6 +7,7 @@ import Head from "next/head";
 
 import { MouseVariantProvider } from "@/modules/customMouse";
 import { Analytics } from "@vercel/analytics/react";
+
 const foundersFont = localFont({
   src: "../common/fonts/Qara.otf",
 });
@@ -21,7 +22,7 @@ export default function App({ Component, pageProps }: AppProps) {
       </Head>
       <div id="__font" className={`${foundersFont.className}`}>
         <MotionConfig
-          transition={{ ease: [0.6, 0.01, -0.05, 0.9], duration: 0.2 }}>
+          transition={{ ease: [0.6, 0.01, -0.05, 0.9], duration: 1 }}>
           <MouseVariantProvider>
             <Component {...pageProps} />
           </MouseVariantProvider>

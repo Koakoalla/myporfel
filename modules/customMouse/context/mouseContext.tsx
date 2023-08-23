@@ -4,22 +4,25 @@ import { MouseVariant } from '../types/mouse.type';
 
 export const mouseContext = createContext({
   variant: MouseVariant.DEFAULT,
+  text: " ",
+  setText: (text: any, string: any) => {},
   setVariant: (_variant: MouseVariant) => {},
 });
 
 const MouseContextProvider = ({ children }: { children: ReactNode }) => {
   const [variant, setVariant] = useState(MouseVariant.DEFAULT);
+  const [text, setText] = useState("");
 
   useEffect(() => {
     if (variant === MouseVariant.DEFAULT) {
-      document.body.style.cursor = 'default';
+      document.body.style.cursor = "default";
     } else {
-      document.body.style.cursor = 'none';
+      document.body.style.cursor = "none";
     }
   }, [variant]);
 
   return (
-    <mouseContext.Provider value={{ variant, setVariant }}>
+    <mouseContext.Provider value={{ variant, setVariant, text, setText }}>
       {children}
     </mouseContext.Provider>
   );
