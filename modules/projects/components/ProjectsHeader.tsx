@@ -16,7 +16,7 @@ const ProjectsHeader = () => {
         }}
         onMouseEnter={setMouseVariant.text}
         onMouseLeave={setMouseVariant.default}>
-        Проекты моего <span className="text-lime-600">портфолио</span>:
+        Проекты моего <span className="text-gradient">портфолио</span>:
       </motion.h2>
     </div>
   );

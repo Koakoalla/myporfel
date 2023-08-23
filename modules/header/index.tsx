@@ -14,7 +14,7 @@ const Header = () => {
           onMouseEnter={setMouseVariant.text}
           onMouseLeave={setMouseVariant.default}>
           <br />
-          Cоздаю крутые <span className="text-green-600">web-приложения</span>.
+          Cоздаю крутые <span className="text-gradient">web-приложения</span>.
         </h1>
 
         <p className="mt-10 text-lg text-lime-500 sm:text-xl">

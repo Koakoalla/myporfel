@@ -51,7 +51,7 @@ const ProjectList = () => {
           onMouseEnter={setMouseVariant.text}
           onMouseLeave={setMouseVariant.default}>
           Остальные проекты на моём{" "}
-          <span className="text-violet-600">
+          <span className="text-gradient">
             <a
               href="https://github.com/Koakoalla"
               target="_black"
