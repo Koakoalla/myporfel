@@ -2,14 +2,15 @@ import { useMouseVariant } from "../customMouse";
 import AboutHeader from "./components/Header";
 import Skills from "./components/Skills";
 
-const About = () => {
+export { AboutHeader };
+
+const AboutSkills = () => {
   const { setMouseVariant } = useMouseVariant();
 
   return (
-    <div className="flex h-full w-full flex-col items-center overflow-hidden pt-36">
-      <AboutHeader />
+    <div className="flex h-full w-full flex-col items-center justify-center md:mt-36">
       <p
-        className="header mt-96 w-1/2 text-center text-6xl"
+        className="header mt-72 w-1/2 text-center text-6xl"
         onMouseEnter={setMouseVariant.text}
         onMouseLeave={setMouseVariant.default}>
         Для своих веб-приложений использую современный стек технологий,
@@ -20,4 +21,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default AboutSkills;
