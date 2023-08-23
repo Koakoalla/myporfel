@@ -1,11 +1,11 @@
-import { createContext, ReactNode, useEffect, useState } from 'react';
+import { createContext, ReactNode, useEffect, useState } from "react";
 
-import { MouseVariant } from '../types/mouse.type';
+import { MouseVariant } from "../types/mouse.type";
 
 export const mouseContext = createContext({
   variant: MouseVariant.DEFAULT,
-  text: " ",
-  setText: (text: any, string: any) => {},
+  text: "",
+  setText: (_text: string) => {},
   setVariant: (_variant: MouseVariant) => {},
 });
 

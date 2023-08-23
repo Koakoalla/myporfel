@@ -1,7 +1,7 @@
-import { useContext } from 'react';
+import { useContext } from "react";
 
-import { mouseContext } from '../context/mouseContext';
-import { MouseVariant } from '../types/mouse.type';
+import { mouseContext } from "../context/mouseContext";
+import { MouseVariant } from "../types/mouse.type";
 
 export const useMouseVariant = () => {
   const { variant, setVariant, text, setText } = useContext(mouseContext);
@@ -12,7 +12,7 @@ export const useMouseVariant = () => {
     button: () => setVariant(MouseVariant.BUTTON),
     technology: (newText: string) => {
       setVariant(MouseVariant.TECHNOLOGY);
-      setText(newText, text);
+      setText(newText);
     },
   };
 

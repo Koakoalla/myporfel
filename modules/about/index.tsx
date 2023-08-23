@@ -1,6 +1,6 @@
-import { useMouseVariant } from "../../customMouse";
-import AboutHeader from "../../hero";
-import Skills from "../components/Skills";
+import { useMouseVariant } from "../customMouse";
+import AboutHeader from "./components/Header";
+import Skills from "./components/Skills";
 
 const About = () => {
   const { setMouseVariant } = useMouseVariant();
@@ -13,9 +13,8 @@ const About = () => {
         onMouseEnter={setMouseVariant.text}
         onMouseLeave={setMouseVariant.default}>
         Для своих веб-приложений использую современный стек технологий,
-        позволяющий раскрыть весь потенциал frontend-разработки.
+        позволяющий раскрыть весь потенциал frontend разработки.
       </p>
-
       <Skills />
     </div>
   );

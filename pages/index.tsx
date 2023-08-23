@@ -1,6 +1,6 @@
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
-import About from "@/modules/about/components";
+import About from "@/modules/about";
 import CustomMouse from "@/modules/customMouse";
 import Hero from "@/modules/hero";
 
