@@ -38,11 +38,11 @@ const CircleMouse = () => {
       mixBlendMode: "difference",
     },
     [MouseVariant.BUTTON]: {
-      height: 100,
-      width: 100,
+      height: 70,
+      width: 70,
 
-      x: mousePosition.x - 50,
-      y: mousePosition.y - 50,
+      x: mousePosition.x - 30,
+      y: mousePosition.y - 30,
 
       mixBlendMode: "difference",
       backgroundImage:
