@@ -1,23 +1,34 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 import { useScrollY } from "@/common/hooks/useScrollY";
 import { useMouseVariant } from "@/modules/customMouse";
+import { useWindowSize } from "@/common/hooks/useWindowSize";
 
 const AboutHeader = () => {
   const { setMouseVariant } = useMouseVariant();
-  const scrolled = useScrollY();
+  const scrollY = useScrollY();
 
+  const { height } = useWindowSize();
+  const [startScroll, setStartScroll] = useState(0);
+
+  const scale = Math.max((scrollY - startScroll) / 5000 + 0.2);
+
+  let opacity = 1;
+
+  if (scrollY > startScroll + height * 1.5) {
+    opacity = 0.9 - (scrollY - (startScroll + height * 1.5)) / 400;
+  }
   return (
-    <motion.h2
-      className="mt-2 h-min whitespace-nowrap text-center text-6xl"
-      style={{
-        fontSize: `calc(max(10vw, 14vh) - ${scrolled / 11}px)`,
-      }}
-      onMouseEnter={setMouseVariant.text}
-      onMouseLeave={setMouseVariant.default}>
-      Koakoalla <span className="text-gradient">frontend-разработчик. </span>{" "}
-      <br />.
-    </motion.h2>
+    <div className="absolute z-50 flex h-full w-full flex-col items-center justify-center px-10">
+      <motion.p
+        className="pointer-events-auto w-max text-center"
+        onMouseEnter={setMouseVariant.text}
+        onMouseLeave={setMouseVariant.default}
+        style={{ scale, fontSize: "max(10vw, 15vh)", opacity }}>
+        and more.
+      </motion.p>
+    </div>
   );
 };
 
