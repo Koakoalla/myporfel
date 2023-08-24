@@ -45,6 +45,7 @@ const Header = () => {
       <motion.span variants={wordAnimation}>чтобы</motion.span>{" "}
       <motion.span variants={wordAnimation}>делать</motion.span>{" "}
       <motion.span variants={wordAnimation}>интернет</motion.span>{" "}
+      <br className="hidden md:block" />
       <motion.span variants={wordAnimation}>интереснее</motion.span>
       <motion.span variants={wordAnimation}>.</motion.span>
     </motion.h1>
