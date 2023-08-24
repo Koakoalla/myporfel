@@ -25,9 +25,7 @@ const AboutHeader = () => {
         className="pointer-events-auto w-max text-center"
         onMouseEnter={setMouseVariant.text}
         onMouseLeave={setMouseVariant.default}
-        style={{ scale, fontSize: "max(10vw, 15vh)", opacity }}>
-        and more.
-      </motion.p>
+        style={{ scale, fontSize: "max(10vw, 15vh)", opacity }}></motion.p>
     </div>
   );
 };

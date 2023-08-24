@@ -10,9 +10,9 @@ const AboutHeader = () => {
     <div className="flex h-full w-full items-center justify-center">
       <ScrollOpacity>
         <motion.h2 className="header h-min text-center">
-          Привет, <br />я Koakoalla{" "}
-          <span className="text-gradient">Frontend Developer</span> <br />{" "}
-          который создает
+          Привет, <br />я Koakoalla &#8212;{" "}
+          <span className="text-gradient">Frontend Developer,</span> <br />{" "}
+          создающий
           <br />
           <span className="text-gradient">web</span> приложения.
         </motion.h2>

@@ -67,7 +67,7 @@ const CircleMouse = () => {
       animate={mouseVariant}
       className="primary-gradient text-centertext-xl pointer-events-none fixed top-0 left-0 z-50 flex h-8 w-8 items-center justify-center rounded-full text-black"
       transition={{ type: "spring", stiffness: 2000, damping: 100 }}>
-      {mouseVariant === MouseVariant.BUTTON && "Click"}
+      {mouseVariant === MouseVariant.BUTTON && "Клик"}
       {mouseVariant === MouseVariant.TECHNOLOGY && text}
     </motion.div>
   );
