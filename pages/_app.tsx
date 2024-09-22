@@ -1,5 +1,6 @@
 import "@/common/styles/global.css";
 
+
 import localFont from "@next/font/local";
 import { MotionConfig } from "framer-motion";
 import type { AppProps } from "next/app";
